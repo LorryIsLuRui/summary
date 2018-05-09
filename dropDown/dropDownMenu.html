@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>仿百度下拉框</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	ul{
+		    margin-left: 10px;
+		    transition: all 1s ease;
+	}
+		input{
+			        width: 300px;
+    height: 40px;
+    line-height: 40px;
+    background: #4caf50a6;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    color: white;
+    font-size: 20px;
+		}
+		li{
+			cursor: pointer;
+			transition: all 1s ease;
+		    list-style: none;
+		    width: 280px;
+		    height: 30px;
+		    line-height: 30px;
+		    background: #8acb8da8;
+		    color: #888e4a;
+		    padding-left: 10px;
+		}
+		li:hover{
+			background: #64a968;
+    color: #caf1cc;
+		}
+		input::-webkit-input-placeholder{
+            color:white;
+        }
+        input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+            color:white;
+        }
+        input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+            color:white;
+        }
+        input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+            color:white;
+        }
+	</style>
+</head>
+<body>
+	<input type="text" name="user-input" placeholder="input..." id="user-input">
+	<ul id="ul"></ul>
+</body>
+<script type="text/javascript">
+	var obj=document.querySelector('#user-input');
+	var body=document.querySelectorAll('body')[0];
+	var ul=document.querySelector('#ul');
+	var inner='';
+	function render(data){
+		//删除前一次请求的li的内容
+		if(ul.innerHTML!=''){
+			ul.innerHTML='';
+		}
+		for(let i = 0, length1 = data.s.length; i < length1; i++){
+			var li=document.createElement('li');
+			li.innerHTML=data.s[i];
+			ul.appendChild(li);
+		}
+		
+	}
+	obj.addEventListener('keyup',function(){
+		if(document.querySelector('#request')){
+			console.log(document.querySelector('#request').toString());
+			body.removeChild(document.querySelector('#request'));
+		}	
+			var script=document.createElement('script');
+			script.id="request";
+			script.src="http://unionsug.baidu.com/su?wd="+encodeURI(obj.value.trim())+'&p=3&cb=render';
+			body.appendChild(script);
+	});
+	//利用冒泡给每个li添加事件。
+	ul.addEventListener('click',function(e){
+		var e=e||window.event;
+		console.log(e.target.innerHTML);
+		window.location.href="https://www.baidu.com/s?word="+encodeURI(e.target.innerHTML);
+	})
+</script>
+</html>
