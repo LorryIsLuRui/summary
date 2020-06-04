@@ -1,0 +1,28 @@
+0.1+0.2=== 0.3？0.1+0.2==0.3?  都是false。为什么？怎么判断相等。用Number.EPSILON【https://www.zhihu.com/question/28551135】
+typeof 值？为什么null是object，其他方法呢 【https://blog.csdn.net/SDUST_JSJ/article/details/102574663】【https://juejin.im/post/5e8b163ff265da47ee3f54a6】
+instanceof 怎么用？原理？
+http\https区别
+数据类型？
+我提了symbol，问symbol能做什么？
+https传输过程
+dns解析
+mvvm？面试官说React不是mvvm框架，why？？？？
+了解过mvc吗？
+git、svn有啥区别
+最难的项目
+二分查找、快排
+扁平化数组
+合并两个数组并且合并后的还是有序数组（1.concat、sort；2.for；3.面试官说可以用while比较简单while【下去试一下】）
+左边定宽、右边自适应
+数组的slice、splice、concat，改变原数组吗？
+let const，const a=[];a相当于一个指针，指向的是数组的位置，那a存在哪里？堆栈？
+promise all race
+遍历数组的方法 for foreach forin map filter every reduce some reduceRight。各自区别，哪些改变原数组，以及forin forof 区别？
+数组去重
+react同构
+问我Java。。。c# sql没答上来。。。
+css单位，px\em\rem【只是知道、但是没做过移动端】
+
+
+
+

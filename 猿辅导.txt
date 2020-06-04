@@ -1,0 +1,78 @@
+0.1 + 0.2 === 0.3   => true or false
+
+function A (a) {
+  thsi.a = a;
+}
+
+new A(1); => a
+
+new A() => 不是a的实例
+
+
+root  => 求二叉树高度  {l: Node; r: Node}
+l, r
+
+function getHeight(root) {
+let length=0;
+fn(root)
+function fn(o){
+
+if(typeof o==='object' && Object.keys(o).length>0){//说明他有子节点
+length+=1;
+Object.keys(o).forEach((val,index)=>{
+fn(val);
+})
+}else{
+//底部
+length+=1;
+}
+}
+
+}
+
+//[1,2,3].filter(fn)//[2,3]
+function fn(para){
+return para>1
+}
+Array.prototype.filter = function(fn){
+const arr=this;
+const result=[];
+arr.forEach((val,index)=>{
+const res=fn(val);
+if(res){
+result.push(val);
+}
+})
+return result;
+}
+[]
+
+function mySetTimeout(fn,para){
+let res=null;
+const interval=setInterval(()=>{
+fn();
+res=interval;
+clearInterval(interval);
+
+},para);
+
+
+return res;
+}
+
+function fn(){
+console.log('test')
+}
+const tst=mySetTimeout(fn,1000);
+
+promise.all
+arr.reduce
+
+小程序分包、
+小程序和H5页面有啥不一样
+http2了解多少，我提了多用复路，让讲一下多路复用
+didmount，父组件的didmount、子组件的哪个先执行。
+React的setstate，为啥有的是异步有的是同步，什么情况下出现这两种
+了解过react的事务吗
+reactHook说一下，有用过吗
+实现一个promise\promise.all\promise.race
